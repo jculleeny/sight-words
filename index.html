@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sight Words Practice</title>
+</head>
+
+<body>
+  <div class="app-container">
+
+    <div class="sight-word-container">
+      <h1><span class="sight-word"></span></h1>
+    </div>
+    <div class="controls">
+      <button onclick="getPreviousWord()" class="previous grow-button">Previous</button>
+      <button onclick="getNewWord()" class="next-button grow-button">Next</button>
+    </div>
+
+    <div class="counter-wrapper grow">
+      <span class="counter">counter</span>
+    </div>
+
+    <canvas id="canvas">Canvas</canvas>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
