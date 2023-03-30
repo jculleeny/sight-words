@@ -16,8 +16,13 @@
       <h1><span class="sight-word"></span></h1>
     </div>
     <div class="controls">
-      <button onclick="getPreviousWord()" class="previous grow-button">Previous</button>
-      <button onclick="getNewWord()" class="next-button grow-button">Next</button>
+      <button id="previous-button" onclick="getPreviousWord()" class="previous grow-button">
+        Previous
+      </button>
+      <button id="next-button" onclick="{ index > 1 ? goForwardHistory() : getNewWord() }"
+        class="next-button grow-button">
+        Next
+      </button>
     </div>
 
     <div class="counter-wrapper grow">

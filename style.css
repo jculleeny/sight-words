@@ -34,7 +34,6 @@ h1 {
 .app-container {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -46,6 +45,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  resize: vertical;
+  overflow: auto;
 }
 
 .sight-word {
@@ -89,6 +90,7 @@ button {
 button:hover {
   background-color: var(--purple);
   box-shadow: 0 0 10px var(--pink);
+  cursor: pointer;
 }
 
 .grow {
@@ -98,6 +100,16 @@ button:hover {
 .grow:hover,
 .grow:active {
   transform: scale(1.6);
+}
+
+.grow-word {
+  transition: all .2s ease-in-out;
+}
+
+.grow-word:hover,
+.grow-word:active {
+  transform: scale(1.6);
+  padding: 0 20px;
 }
 
 .grow-button {
