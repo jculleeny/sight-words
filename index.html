@@ -12,17 +12,31 @@
 <body>
   <div class="app-container">
 
+    <!-- CURRENT WORD -->
     <div class="sight-word-container">
       <h1><span class="sight-word"></span></h1>
     </div>
+
+    <!-- CONTROLS -->
     <div class="controls">
-      <button id="previous-button" onclick="getPreviousWord()" class="previous grow-button">
-        Previous
-      </button>
-      <button id="next-button" onclick="{ index > 1 ? goForwardHistory() : getNewWord() }"
-        class="next-button grow-button">
-        Next
-      </button>
+      <div class="main-controls">
+        <button id="previous-button" onclick="getPreviousWord()" class="previous grow-button">
+          Previous
+        </button>
+        <button id="next-button" onclick="{ index > 1 ? goForwardHistory() : getNewWord() }"
+          class="next-button grow-button">
+          Next
+        </button>
+      </div>
+      <!-- OPTIONS -->
+      <fieldset class="options">
+        <legend>Options</legend>
+        <button onclick="lowercase === true ? handleCapitalize() : handleLowercaseFromCapitalize()"
+          class="capitalize-first" id="capitalize-first">Capitalize First Letter</button>
+        <button onclick="lowercase === true ? handleUppercase() : handleLowercaseFromUppercase()" class="capitalize-all"
+          id="capitalize-all">Capitalize
+          All Letters</button>
+      </fieldset>
     </div>
 
     <div class="counter-wrapper grow">

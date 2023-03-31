@@ -12,11 +12,16 @@ let index = 1
 let previousWords = []
 let counterTotal = sightWordsArray.length
 let currentCount = 0
+let capitalize = false
+let uppercase = false
+let lowercase = true
 
 const sightWord = document.querySelector('.sight-word')
 const counter = document.querySelector('.counter')
 const counterWrapper = document.querySelector('.counter-wrapper')
 const nextButton = document.querySelector('#next-button')
+const capitalizeFirst = document.querySelector('#capitalize-first')
+const capitalizeAll = document.querySelector('#capitalize-all')
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -66,6 +71,30 @@ const getPreviousWord = () => {
 const goForwardHistory = () => {
   sightWord.innerHTML = previousWords.at( -(index - 1))
   index--
+}
+
+const handleCapitalize = () => {
+  sightWord.children[0].style = 'text-transform: capitalize'
+  capitalizeFirst.style = "background-color: var(--purple)"
+  lowercase = false
+}
+
+const handleUppercase = () => {
+  sightWord.style = "text-transform: capitalize"
+  capitalizeAll.style = "background-color: var(--purple)"
+  lowercase = false
+}
+
+const handleLowercaseFromUppercase = () => {
+  sightWord.style = "text-transform: lowercase"
+  capitalizeAll.style = "background-color: var(--current-line)"
+  lowercase = true
+}
+
+const handleLowercaseFromCapitalize = () => {
+  sightWord.children[0].style = "none"
+  capitalizeFirst.style = "background-color: var(--current-line)"
+  lowercase = true
 }
 
 counter.innerHTML = `${currentCount}/${counterTotal}`
