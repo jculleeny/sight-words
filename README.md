@@ -12,3 +12,4 @@ Web app for practicing Odyssey Kindergarten sight words that the students are cu
 
 ## Bugs
 - Reset buttons on new word.
+- Word counter stops at 59/60.
